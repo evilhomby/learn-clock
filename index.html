@@ -172,7 +172,7 @@ $(function(){
 				case 'easy':
 					minute = [0, 30][Math.floor(Math.random() * 2)];
 					break
-				case 'mideum':
+				case 'normal':
 					minute = Math.floor(Math.floor(Math.random() * 60) / 5) * 5
 					break;
 				case 'hard':
@@ -180,7 +180,7 @@ $(function(){
 					break;
 			}
 			
-			hourHand = (hour * 5) * (360 / 60) + extra;
+			hourHand = (hour * 5) * (360 / 60) + extra + (minute / 60 * 30);
 			minuteHand =  minute / 60 * 360 + extra;
 			ans = `${hour} ${minute == 0 ? '點' : ' 點 ' + minute + ' 分'} `
 			$('#hour').addClass('animated').css({transform: `rotate(${hourHand}deg)`})
