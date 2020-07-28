@@ -2,9 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>認識時鐘</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 <style>
+* {
+	user-select: none;
+}
 html, body {
 	margin: 0px;
 	padding: 0px;
@@ -57,6 +61,15 @@ body {
 	border: 10px solid #024ec7;
 	box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.5);
 	cursor: pointer;
+}
+@media (max-width: 577px) {
+	#clock {
+		width: 90vw;
+		height: 90vw;
+	}
+	#result {
+		font-size: 2rem;
+	}
 }
 #clock::before {
 	content: '';
